@@ -127,7 +127,7 @@ In some situtations (e.g. [when using Docker Compose](https://docs.docker.com/co
 yawp -m --env 'yawp.env' 'I love to toot!'
 ```
 
-7. Provide environment variables when calling yawp
+7. Provide environment variables on command line
 
 You could also set `ENV` settings manually when you call `yawp`:
 
