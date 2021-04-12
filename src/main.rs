@@ -167,7 +167,7 @@ fn main() {
   .author("Hugh Rundle")
   .about("Send social media messages from the command line")
   .arg(Arg::with_name("YAWP")
-  .help("Message (post) to send. If stdin has been redirected (e.g. via a pipe) YAWP must be provided as '-'. If you are not redirecting stdin, prividing a single dash (-) as the YAWP value will cause yawp to hang.")
+  .help("Message (post) to send. If stdin has been redirected (e.g. via a pipe) YAWP must be provided as '-'. If you are not redirecting stdin, providing a single dash (-) as the YAWP value will cause yawp to hang.")
   .required(true)
   .takes_value(true)
   )
