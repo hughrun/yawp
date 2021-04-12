@@ -11,6 +11,20 @@ A command line (CLI) app for publishing social media posts.
 * outputs the message as plaintext to `stdout` (i.e. the output is the input)
 * takes all configuration from environment (`ENV`) values to enable flexibility
 
+## Installation
+
+### MacOS or Linux
+
+1. Download the relevant binary file from [the latest release](https://github.com/hughrun/yawp/releases/latest).
+2. Save it somewhere in your `PATH`, e.g. in `/usr/local/bin/`. Alternatively you can symlink it from wherever you want to save it, like this: `ln -s /my/awesome/directory/yawp /usr/local/bin/`.
+
+### From source
+
+If you're using another platform or don't trust my binaries you can build your own from source:
+
+1. `git clone` or download the repository as a zip.
+2. `cargo build --release`
+
 ## Usage:
 `yawp [FLAGS] [OPTIONS] <YAWP>`
 
