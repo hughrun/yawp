@@ -15,20 +15,20 @@ A command line (CLI) app for publishing social media posts.
 `yawp [FLAGS] [OPTIONS] <YAWP>`
 
 ## Flags:
-`-h`, `--help`        Prints help information
-`-m`, `--mastodon`    Send toot
-`-q`, `--quiet`       Suppress output (error messages will still be sent to `stderr`)
-`-t`, `--twitter`     Send tweet
-`-V`, `--version`     Prints version information
+`-h`, `--help`        Prints help information  
+`-m`, `--mastodon`    Send toot  
+`-q`, `--quiet`       Suppress output (error messages will still be sent to `stderr`)  
+`-t`, `--twitter`     Send tweet  
+`-V`, `--version`     Prints version information  
 
 ## Options:
-`-e`, `--env <env>`   path to env file
+`-e`, `--env <env>`   path to env file  
 
 ## Args:
-`<YAWP>`              Message (post) to send. If stdin has been redirected
-                      e.g. via a pipe) YAWP must be provided as `-`.
-                      If you are not redirecting stdin, providing a single 
-                      dash (-) as the YAWP value will cause yawp to hang.
+`<YAWP>`              Message (post) to send. If stdin has been redirected  
+                      e.g. via a pipe) YAWP must be provided as `-`.  
+                      If you are not redirecting stdin, providing a single  
+                      dash (-) as the YAWP value will cause yawp to hang.  
 
 If using `stdin` you must provide a hyphen (`-`) as the argument. However if you do this and are *not* redirecting `stdin` from somewhere, `yawp` will hang your shell unless you supply `EOF` by pressing `Ctrl + D`. (See example 5 below).
 
