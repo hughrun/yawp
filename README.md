@@ -3,7 +3,7 @@ A command line (CLI) app for publishing social media posts.
 
 ## In brief
 
-`yawp` takes some text as an argument and publishes it to the social media accounts of your choice. Current options are Twitter and Mastodon, it's possible more will be added in future (or not).
+`yawp` takes some text as an argument and publishes it to the social media accounts of your choice. No need to read the comments, just send your [yawp](https://www.wordnik.com/words/yawp) and move on with your day. Current options are Twitter and Mastodon, it's possible more will be added in future (or not).
 
 `yawp` is specifically designed to fit within a broader toolchain: in general terms it tries to follow "the Unix philosophy":
 
