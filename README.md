@@ -25,9 +25,9 @@ A command line (CLI) app for publishing social media posts.
 `-e`, `--env <env>` path to env file  
 
 ## Args:
-`<YAWP>` Message (post) to send. If stdin has been redirectede.g. via a pipe) YAWP must be provided as `-`. If you are not redirecting stdin, providing a single dash (`-`) as the YAWP value will cause yawp to hang.
+`<YAWP>` Message (post) to send.
 
-If using `stdin` you must provide a hyphen (`-`) as the argument. However if you do this and are *not* redirecting `stdin` from somewhere, `yawp` will hang your shell unless you supply `EOF` by pressing `Ctrl + D`. (See example 5 below).
+If using `stdin` you must provide a hyphen (`-`) as the argument. However if you do this and are *not* redirecting `stdin` from somewhere, `yawp` will hang your shell unless you supply `EOF` by pressing `Ctrl + D`. (See **example 5** below).
 
 ## Environment variables
 
