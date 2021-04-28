@@ -16,7 +16,9 @@ A command line (CLI) app for publishing social media posts.
 ### MacOS or Linux
 
 1. Download the relevant binary file from [the latest release](https://github.com/hughrun/yawp/releases/latest).
-2. Save it somewhere in your `PATH`, e.g. in `/usr/local/bin/`. Alternatively you can symlink it from wherever you want to save it, like this: 
+2. Rename it to `yawp`
+3. Make the file executable: `chmod +x yawp`
+4. Save it somewhere in your `PATH`, e.g. in `/usr/local/bin/`. Alternatively you can symlink it from wherever you want to save it, like this: 
 ```bash
 ln -s /my/awesome/directory/yawp /usr/local/bin/
 ```
@@ -27,6 +29,10 @@ If you're using another platform or don't trust my binaries you can build your o
 
 1. `git clone` or download the repository as a zip.
 2. `cargo build --release`
+3. Save it somewhere in your `PATH`, e.g. in `/usr/local/bin/`. Alternatively you can symlink it from `target/release`, like this: 
+```bash
+ln -s /Users/YOURNAME/YAWP_PATH/target/release/yawp /usr/local/bin/
+```
 
 ## Usage:
 `yawp [FLAGS] [OPTIONS] <YAWP>`
