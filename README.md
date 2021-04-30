@@ -13,7 +13,13 @@ A command line (CLI) app for publishing social media posts.
 
 ## Installation
 
-### MacOS or Linux
+### Homebrew
+
+```bash
+brew tap hughrun/yawp && brew install yawp
+```
+
+### From binary on MacOS or Linux
 
 1. Download the relevant binary file from [the latest release](https://github.com/hughrun/yawp/releases/latest).
 2. Rename it to `yawp`
