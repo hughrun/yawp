@@ -72,21 +72,25 @@ fn tweet(msg: &String) -> Result<reqwest::blocking::Response, reqwest::Error> {
   // Twitter status posting endpoint
   let endpoint = "https://api.twitter.com/1.1/statuses/update.json";
 
+  // We have to send the status as a URL encoded param instead of form data
+  // because there is a discrepency between Twitter and the oauth standard
+  // when asterisks are encoded (or not encoded!)
+  let encoded_url = oauth::to_uri_query(String::from(endpoint), &post);
+  let client = reqwest::blocking::Client::new();
+
   // Create Twitter token
   let consumer_key = env::var("TWITTER_CONSUMER_KEY").unwrap_or(String::from(""));
   let consumer_secret = env::var("TWITTER_CONSUMER_SECRET").unwrap_or(String::from(""));
   let access_token = env::var("TWITTER_ACCESS_TOKEN").unwrap_or(String::from(""));
   let token_secret = env::var("TWITTER_ACCESS_SECRET").unwrap_or(String::from(""));
-  let token = oauth::Token::from_parts(consumer_key, consumer_secret, access_token, token_secret);
+  // this makes a hash of the four secrets
+  let hash = oauth::Token::from_parts(consumer_key, consumer_secret, access_token, token_secret);
 
   // Create the `Authorization` header.
-  let authorization_header = oauth::post(endpoint, &post, &token, oauth::HmacSha1);
+  let authorization_header = oauth::post(endpoint, &post, &hash, oauth::HmacSha1);
 
   // Let's tweet!
-  let params = [("status", &post.status)];
-  let client = reqwest::blocking::Client::new();
-  client.post(endpoint)
-  .form(&params)
+  client.post(encoded_url)
   .header(reqwest::header::AUTHORIZATION, authorization_header)
   .send()
 }
