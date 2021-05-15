@@ -167,7 +167,7 @@ fn main() {
 
   // get arguments using clap
   let arguments = App::new("lette.rs")
-  .version("0.1.0")
+  .version("0.1.1")
   .author("Hugh Rundle")
   .about("Send social media messages from the command line")
   .arg(Arg::with_name("YAWP")
