@@ -150,10 +150,10 @@ Awoo!
 
 6. Provide environment variables from file
 
-In some situtations (e.g. [when using Docker Compose](https://docs.docker.com/compose/environment-variables/)) you may have already set environment variables specific to those needed by `yawp`. If not, you can call them in from a file by providing the filepath using `-e` or `--env`:
+In some situtations (e.g. [when using Docker Compose](https://docs.docker.com/compose/environment-variables/) or a `systemd` unit file) you may have already set environment variables specific to those needed by `yawp`. If not, you can call them in from a file by providing the filepath using `-e` or `--env`:
 
 ```bash
-yawp -m --env 'yawp.env' 'I love to toot!'
+yawp -t --env ~/yawp.env 'I love to tweet!'
 ```
 
 7. Provide environment variables on command line
@@ -161,5 +161,5 @@ yawp -m --env 'yawp.env' 'I love to toot!'
 You could also set `ENV` settings manually when you call `yawp`:
 
 ```bash
-MASTODON_BASE_URL=https://ausglam.space MASTODON_ACCESS_TOKEN=abcd1234 yawp -m '🎺 I am tooting!'
+MASTODON_BASE_URL=https://ausglam.space MASTODON_ACCESS_TOKEN=abcd1234 yawp '🎺 I am tooting!' -m
 ```
