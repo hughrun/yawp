@@ -166,8 +166,8 @@ fn process_yawp(yawp: &String, arguments: clap::ArgMatches) {
 fn main() {
 
   // get arguments using clap
-  let arguments = App::new("lette.rs")
-  .version("0.1.1")
+  let arguments = App::new("yawp")
+  .version("0.1.2")
   .author("Hugh Rundle")
   .about("Send social media messages from the command line")
   .arg(Arg::with_name("YAWP")
