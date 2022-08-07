@@ -13,3 +13,5 @@ categories = ["command-line-utilities"]
 clap = "^2.33.0"
 oauth = { version = "^0.5", package = "oauth1-request" }
 reqwest = { version = "^0.11.2", features = ["blocking"] }
+# This is needed for building on Linux
+openssl = { version = "0.10.33", features = ["vendored"] }
